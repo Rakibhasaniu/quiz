@@ -4,12 +4,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
 import Home from './components/Home/Home'
 import Topics from './components/Topics/Topics'
-import Statictics from './components/Statistics/Statictics';
+import Statictics from './components/Statictics/Statictics';
 import Question from './components/Question/Question';
+import ErrorPage from './components/ErrorPage/Errorpage';
 
 const router = createBrowserRouter([
   {
     path:'/',
+    errorElement: <ErrorPage></ErrorPage>,
+    loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
     element:<Main></Main>,
     children: [
       {
@@ -21,16 +24,17 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path:'/topics',
-        element: <Topics></Topics>
-      },
-      {
         path:'/statictics',
         element: <Statictics></Statictics>
       },
       {
         path:'/question',
         element: <Question></Question>
+      },
+      {
+        path:'/quiz/:id',
+        loader: async({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+        element: <Topics></Topics>
       }
     ]
   },

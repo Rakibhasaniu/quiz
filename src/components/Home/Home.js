@@ -1,9 +1,19 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { DataContext } from '../../layout/Main';
+import Display from '../Display/Display';
+ 
 const Home = () => {
+
+    const datas= useContext(DataContext);
+    const dt = datas.data
+    // console.log(dt);
+   
+    
     return (
         <div>
-            <h2>This Is Home Area</h2>
+            {
+                dt.map(quiz => <Display key={quiz.id} quiz={quiz}></Display> )
+            }
         </div>
     );
 };
