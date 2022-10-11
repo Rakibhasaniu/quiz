@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Question = () => {
+const Question = ({option}) => {
+    console.log(option);
     return (
         <div>
-            <h2>This Is question Area</h2>
+            <h2></h2>
         </div>
     );
 };

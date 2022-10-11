@@ -5,8 +5,8 @@ import Display from '../Display/Display';
 const Home = () => {
 
     const datas= useContext(DataContext);
+    // console.log(datas);
     const dt = datas.data
-    // console.log(dt);
    
     
     return (
