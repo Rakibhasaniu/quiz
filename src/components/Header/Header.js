@@ -2,13 +2,11 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className="hero min-h-50 bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+        <div className="hero min-h-25 bg-base-200 bg-slate-500 py-4 m-2 rounded ">
+  <div className="hero-content flex justify-around lg:flex">
+    <img src="https://placeimg.com/100/50/arch" className="max-w-sm rounded-lg shadow-2xl"  alt=''/>
     <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="text-3xl ">Web Dev Quiz</h1>
     </div>
   </div>
 </div>
