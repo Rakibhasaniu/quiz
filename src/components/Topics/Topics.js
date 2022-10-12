@@ -13,9 +13,9 @@ const Topics = () => {
    
     
     return (
-        <div className='m-10'>
+        <div className= 'flex justify-center items-center '>
             <div className=''>
-            <h2>Quiz of {data.name}</h2>
+            <h2 className='text-2xl text-center m-4 font-bold '>Quiz of {data.name}</h2>
             {
                quizs.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>) 
             }
