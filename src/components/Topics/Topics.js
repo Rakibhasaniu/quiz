@@ -9,7 +9,7 @@ const Topics = () => {
     const {data} = allData;
     
      const quizs = data.questions;
-    //  console.log(quiz);
+     console.log(quizs);
    
     
     return (

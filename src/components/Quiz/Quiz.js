@@ -1,31 +1,33 @@
-import React from 'react';
+import React, { useState } from "react";
 
+const Quiz = ({ quiz }) => {
+  
+  const { options, question,correctAnswer } = quiz;
+  console.log(quiz);
+  const[correct, setCorrect] = useState(false);
 
+  const handleQuiz = (answer, correctAns) => { 
+    if(answer == correctAns){
+      alert("Your answer is true")
+    }
+    else{
+      alert("your answer is false")
+    }
 
-const Quiz = ({quiz}) => {
-    // console.log(quiz);
-    // const{question,options} = quiz;
-    // const allOption = quiz.options;
-    // // const allOption = quiz[0];
-    // // const {option} = allOption;
-    // console.log(allOption);
-    const{options, question} = quiz;
+   }
 
-
-    return (
-        <div>
-            
-           <div>
-           {
-            <h1>Quiz: {question}</h1>
-           }
-           {
-            options.map(option => <p>{option}</p>)
-           }
-           </div>
-           
-        </div>
-    );
+  return (
+    <div>
+      <div>
+        {<h1>Quiz: {question}</h1>}
+        {options.map((option, i) => (
+          <div className="py-2 bg-gray-400 my-4 ">
+            {i}.<button onClick={()=>handleQuiz(option, correctAnswer)}>{option}</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Quiz;
