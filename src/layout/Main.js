@@ -6,12 +6,8 @@ import Navbar from '../components/Navbar/Navbar';
 
 export const DataContext = createContext([])
 const Main = () => {
-    const datas = useLoaderData();
-    // console.log(datas);
-    
-    // const{data} = datas;
-    
-    return (
+    const datas = useLoaderData(); 
+  return (
         <DataContext.Provider value={datas}>
             <Navbar></Navbar>
             <Outlet></Outlet>
