@@ -13,11 +13,13 @@ const Topics = () => {
    
     
     return (
-        <div>
+        <div className='m-10'>
+            <div className=''>
             <h2>Quiz of {data.name}</h2>
             {
                quizs.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>) 
             }
+        </div>
         </div>
     );
 };

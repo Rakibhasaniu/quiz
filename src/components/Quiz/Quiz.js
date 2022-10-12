@@ -18,10 +18,10 @@ const Quiz = ({ quiz }) => {
 
   return (
     <div>
-      <div>
-        {<h1>Quiz: {question}</h1>}
+      <div className="rounded">
+        {<h1 className="py-4 ">Quiz: {question}</h1>}
         {options.map((option, i) => (
-          <div className="py-2 bg-gray-400 my-4 ">
+          <div className="py-32 w-2/4 h-4 bg-gray-400 my-4 ">
             {i}.<button onClick={()=>handleQuiz(option, correctAnswer)}>{option}</button>
           </div>
         ))}
