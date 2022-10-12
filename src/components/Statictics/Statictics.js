@@ -6,7 +6,7 @@ import './Statistics.css'
 
 const Statictics = () => {
     const datas = useLoaderData().data;
-    console.log(datas);
+    
     return (
         <div className='rechart'>
              <div>

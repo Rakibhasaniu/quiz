@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Quiz = ({ quiz }) => {
   
   const { options, question,correctAnswer } = quiz;
-  console.log(quiz);
+ 
   const[correct, setCorrect] = useState(false);
   const[isshow, setIsshow] = useState(false);
 

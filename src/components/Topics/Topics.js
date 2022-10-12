@@ -5,11 +5,11 @@ import Quiz from '../Quiz/Quiz';
 const Topics = () => {
     
     const allData = useLoaderData();
-    // console.log(allData);
+    
     const {data} = allData;
     
      const quizs = data.questions;
-     console.log(quizs);
+     
    
     
     return (
