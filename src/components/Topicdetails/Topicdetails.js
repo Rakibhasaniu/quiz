@@ -3,18 +3,16 @@ import React from 'react';
 const Topicdetails = ({topic}) => {
     const{name,total,logo} = topic;
     return (
-        <div className='p-5 m-5 '>
-            <div className="card w-50 bg-yellow-500 shadow-xl">
-  <figure><img src={logo} alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">{name}</h2>
-    <p>{total}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-        </div>
+        <div>
+        <img
+          className=' bg-slate-500 object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80'
+          src={logo}
+          alt=''
+        />
+        <p className='mb-2 text-xl font-bold leading-none sm:text-2xl'>{name}</p>
+       
+        
+      </div>
     );
 };
 
