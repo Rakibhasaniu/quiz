@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+
+
 const Quiz = ({ quiz }) => {
   
   const { options, question,correctAnswer } = quiz;
@@ -8,10 +10,10 @@ const Quiz = ({ quiz }) => {
 
   const handleQuiz = (answer, correctAns) => { 
     if(answer == correctAns){
-      alert("Your answer is true")
+      alert('correct')
     }
     else{
-      alert("your answer is false")
+      alert('false')
     }
 
    }

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
@@ -7,6 +7,8 @@ import Topics from './components/Topics/Topics'
 import Statictics from './components/Statictics/Statictics';
 import Question from './components/Question/Question';
 import ErrorPage from './components/ErrorPage/Errorpage';
+import Quiz from './components/Quiz/Quiz';
+import Header from './components/Header/Header';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:'/home',
         element: <Home></Home>
+      },
+      {
+        path:'/header',
+        element: <Header></Header>
       },
       {
         path:'/statictics',
